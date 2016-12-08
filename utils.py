@@ -63,7 +63,8 @@ class MAN2HTML(object):
             part1, part2 = '', ''
         else:
             part1, part2 = parts.group(1), parts.group(2)
-            if (part1[-1] == '.' and part1[:-1].isnumeric()) or len(part1[-1]) == 1:
+            if (part1[-1] == '.' and part1[:-1].isnumeric()) or \
+               len(part1[-1]) == 1:
                 inline_style = 'display:inline;'
                 part2 = 0
         return '{}<h4 style="{}">{}</h4><div ' \
@@ -401,5 +402,5 @@ class MAN2HTML(object):
     def man2html(self, text_lines, styles=''):
         data = self.man2html_base(text_lines)
         beginning = self.HEADER.format(styles) + self._page_title + \
-                    self.get_contents() + data
+            self.get_contents() + data
         return beginning + '</div></span>' + self._main_footer() + self.FOOTER

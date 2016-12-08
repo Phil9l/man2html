@@ -91,8 +91,8 @@ class TestMan2Html(unittest.TestCase):
     def test_IP(self):
         self.assertEqual(M2H(['.IP "HEADER" 2', 'test', '123'])
                          .replace('\n', ''),
-                         ('<h4 style="display:block;">HEADER</h4><div '
-                          'style="padding-left: 2em;display:block;">test123'))
+                         ('<h4 style="display:inline;">HEADER</h4><div '
+                          'style="padding-left: 0em;display:inline;">test123'))
 
     def test_special_chars(self):
         self.assertEqual(M2H([r'a\(cob']).replace('\n', ''), 'a©b')
