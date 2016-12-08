@@ -61,7 +61,8 @@ class TestMan2Html(unittest.TestCase):
     def test_title(self):
         self.assertEqual(M2HO.man2html(['.TH GCC 1 "2015-04-26" '
                                         '"gcc-4.8" "GNU"']).replace('\n', ''),
-                         ('<html>  <head>    <style>      * {        '
+                         ('<html>  <head>    <meta charset="utf-8" />'
+                          '    <style>      * {        '
                           'font-size: 10pt;      }      .left-block {        '
                           'width: 33%;        float: left;        '
                           'text-align: left;      }      .center-block {'
