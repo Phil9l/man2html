@@ -1,5 +1,5 @@
 # MAN2HTML
-Simple console application for converting from man (nroff format) into html for my university python course.
+Simple console application (written for my university python course) for converting from man (nroff format) into html.
 
 ## Description
 Converts nroff data into html format.
@@ -11,7 +11,7 @@ Converts nroff data into html format.
 `./main.py --input tmp.txt --output output.html`
 Or to convert from man directly use the following one:
 ```bash
-zcat ``man -w g++`` > in.txt; ./main.py -i in.txt -o out.html
+zcat `man -w g++` > in.txt; ./main.py -i in.txt -o out.html
 ```
 
 ### Options
